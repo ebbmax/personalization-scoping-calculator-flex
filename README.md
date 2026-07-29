@@ -2,7 +2,7 @@
 
 A self-contained HTML tool for Salesforce Account Executives to scope Personalization opportunities under the new **Flex Credits** pricing & packaging and generate a recommended SKU bill of materials (BOM).
 
-**Live URL:** _to be added after enabling GitHub Pages_
+**Live URL:** [https://git.soma.salesforce.com/pages/mebb/personalization-scoping-calculator-flex/](https://git.soma.salesforce.com/pages/mebb/personalization-scoping-calculator-flex/)
 
 ---
 

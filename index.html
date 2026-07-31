@@ -1866,6 +1866,13 @@
             const flexCreditUnits = totalDecisions > 0
                 ? Math.ceil((totalDecisions * 0.1) / 100000) : 0;
 
+            // Marketing Data Bundle is always the first recommended SKU
+            skus.push({
+                name: 'Marketing Data Bundle',
+                quantity: 1,
+                notes: 'The Marketing Data Bundle is for Marketing customers that need Data and AI Products. It helps ensure proper AE compensation recognition for products like Flex Credits. It has no impact on the features or functionality the customer receives.'
+            });
+
             if (mcpActivelyUsed) {
                 // Renewal + owns + actively using MCP → recommend MCP+ (region-specific Flex variant)
                 skus.push({

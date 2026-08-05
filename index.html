@@ -1824,6 +1824,17 @@
                 `;
             }
 
+            const namedProfilesRaw = document.getElementById('numNamedProfiles').value;
+            const namedProfiles = parseInt(namedProfilesRaw) || 0;
+            if (namedProfilesRaw.trim() !== '' && namedProfiles > 0) {
+                summaryHTML += `
+                    <div class="slds-summary-tile">
+                        <div class="slds-summary-tile__label">MCP Named Profiles</div>
+                        <div class="slds-summary-tile__value">${namedProfiles.toLocaleString()}</div>
+                    </div>
+                `;
+            }
+
             document.getElementById('summaryGrid').innerHTML = summaryHTML;
         }
 

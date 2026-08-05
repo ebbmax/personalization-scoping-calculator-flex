@@ -1881,6 +1881,16 @@
                     notes: 'Region-specific SKU that grants a customer access to both Salesforce Personalization and Marketing Cloud Personalization. Data Cloud is required to use Salesforce Personalization.'
                 });
 
+                // MUVs SKU — combined web MUVs + mobile MAUs ÷ 100,000
+                const totalMUVs = totalWebMUVs + totalMobileMAUs;
+                if (totalMUVs > 0) {
+                    skus.push({
+                        name: 'Marketing Cloud Personalization - Unique Visitors',
+                        quantity: Math.ceil(totalMUVs / 100000),
+                        notes: '(Web MUVs + Mobile MAUs) ÷ 100,000 — Discount to 100% in order to divert funds to cover either SSRT profiles or RT event ingest via Flex.'
+                    });
+                }
+
                 // Named Profiles SKU driven by MCP Named Profiles count
                 const numNamedProfiles = parseInt(document.getElementById('numNamedProfiles').value) || 0;
                 if (numNamedProfiles > 0) {

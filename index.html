@@ -1355,7 +1355,7 @@
                             <span class="slds-callout__title">Outbound Channels Only</span>
                         </div>
                         <div class="slds-callout__body">
-                            <p>Based on selecting exclusively outbound channels, the Salesforce Personalization (Flex) base SKU is not required. If the customer wants to execute personalization on the web or mobile app, please update the channels selected on the 2nd step of the scoping calculator.</p>
+                            <p>Based on selecting exclusively outbound channels, the Salesforce Personalization base SKU is not required. If the customer wants to execute personalization on the web or mobile app, please update the channels selected on the 2nd step of the scoping calculator.</p>
                         </div>
                     </div>
 
@@ -1887,7 +1887,7 @@
             if (mcpActivelyUsed) {
                 // Renewal + owns + actively using MCP → recommend MCP+ (region-specific Flex variant)
                 skus.push({
-                    name: `Marketing Cloud Personalization+ (${region} Flex)`,
+                    name: `Marketing Cloud Personalization+ (${region})`,
                     quantity: 1,
                     notes: 'Region-specific SKU that grants a customer access to both Salesforce Personalization and Marketing Cloud Personalization. Data Cloud is required to use Salesforce Personalization.'
                 });
@@ -1920,10 +1920,10 @@
                     });
                 }
             } else {
-                // All other cases (New Customer OR Renewal without active MCP usage) → Salesforce Personalization (Flex)
+                // All other cases (New Customer OR Renewal without active MCP usage) → Salesforce Personalization
                 if (hasWebOrMobile) {
                     skus.push({
-                        name: 'Salesforce Personalization (Flex)',
+                        name: 'Salesforce Personalization',
                         quantity: 1,
                         notes: 'Base SKU that is required to execute web and mobile app personalization.'
                     });
@@ -2023,7 +2023,7 @@
             if (hasOutboundOnly) {
                 htmlContent += '<div class="callout callout-info">';
                 htmlContent += '<div class="callout-header">ℹ️ Outbound Channels Only</div>';
-                htmlContent += '<div class="callout-body">Based on selecting exclusively outbound channels, the Salesforce Personalization (Flex) base SKU is not required. If the customer wants to execute personalization on the web or mobile app, please update the channels selected.</div>';
+                htmlContent += '<div class="callout-body">Based on selecting exclusively outbound channels, the Salesforce Personalization base SKU is not required. If the customer wants to execute personalization on the web or mobile app, please update the channels selected.</div>';
                 htmlContent += '</div>';
             }
 

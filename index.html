@@ -1366,6 +1366,7 @@
                             <span class="slds-callout__title">Data Cloud Prerequisite for Salesforce Personalization</span>
                         </div>
                         <div class="slds-callout__body">
+                            <p>This calculator does not scope the credits required to support real-time event consumption. <u>These credits must be scoped separately.</u></p>
                             <p>To leverage Salesforce Personalization for web and/or mobile app personalization, the customer must own one of the following Data Cloud entitlement combinations:</p>
                             <ul>
                                 <li><strong>Option 1:</strong> Data Services Credits + Sub-Second Real-Time Profiles</li>
@@ -1916,7 +1917,7 @@
                     skus.push({
                         name: 'Flex Credits (100k)',
                         quantity: flexCreditUnits,
-                        notes: 'Flex Credits = (Total Decisions × 0.1) ÷ 100,000. Decisions are calculated across all selected channels over the full contract duration.'
+                        notes: 'Flex Credits = (Total Decisions × 0.1) ÷ 100,000. Decisions are calculated across all selected channels over the full contract duration. <strong><u>The quantity of flex credits quoted only covers personalization decisioning needs. Additional consumption credits must be scoped separately for real-time event ingestion.</u></strong>'
                     });
                 }
             } else {
@@ -1933,7 +1934,7 @@
                     skus.push({
                         name: 'Flex Credits (100k)',
                         quantity: flexCreditUnits,
-                        notes: 'Flex Credits = (Total Decisions × 0.1) ÷ 100,000. Decisions are calculated across all selected channels over the full contract duration.'
+                        notes: 'Flex Credits = (Total Decisions × 0.1) ÷ 100,000. Decisions are calculated across all selected channels over the full contract duration. <strong><u>The quantity of flex credits quoted only covers personalization decisioning needs. Additional consumption credits must be scoped separately for real-time event ingestion.</u></strong>'
                     });
                 }
             }
@@ -2031,6 +2032,7 @@
                 htmlContent += '<div class="callout callout-warning">';
                 htmlContent += '<div class="callout-header">⚠️ Data Cloud Prerequisite for Salesforce Personalization</div>';
                 htmlContent += '<div class="callout-body">';
+                htmlContent += '<p>This calculator does not scope the credits required to support real-time event consumption. <u>These credits must be scoped separately.</u></p>';
                 htmlContent += '<p>To leverage Salesforce Personalization for web and/or mobile app personalization, the customer must own one of the following Data Cloud entitlement combinations:</p>';
                 htmlContent += '<ul>';
                 htmlContent += '<li><strong>Option 1:</strong> Data Services Credits + Sub-Second Real-Time Profiles</li>';
